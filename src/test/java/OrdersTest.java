@@ -1,0 +1,31 @@
+import forcheckorders.AcceptOrder;
+import forparameterized.Order;
+import io.restassured.response.Response;
+import org.junit.Before;
+import org.junit.Test;
+
+import static org.apache.http.HttpStatus.SC_OK;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+
+public class OrdersTest {
+    Order order;
+
+    @Before
+    public void setUp() {
+        order = Order.getRandomOrder();
+    }
+
+    @Test
+    public void checkCodeOrder() {
+        Response listOrder = AcceptOrder.getListOrders();
+        assertEquals(SC_OK, listOrder.statusCode());
+    }
+
+    @Test
+    public void checkTextOrder() {
+        Response listOrder = AcceptOrder.getListOrders();
+        assertNotNull(listOrder);
+    }
+}
