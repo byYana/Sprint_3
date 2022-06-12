@@ -1,0 +1,5 @@
+forcourier\CourierLogin.class
+forcourier\CouriersAPI.class
+fororders\Order.class
+forcourier\Courier.class
+fororders\OrderApi.class
