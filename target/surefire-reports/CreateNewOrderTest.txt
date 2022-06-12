@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: CreateNewOrderTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.515 s - in CreateNewOrderTest
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.563 s - in CreateNewOrderTest
