@@ -91,6 +91,15 @@ public class CreatNewCourierTest {
     }
 
     @Test
+    public void checkCodeDefectPassword() { //проверяем не успешный запрос и код с нехваткой данных
+        //создание курьера
+        courier.setPassword(null);
+        Response response = CouriersAPI.createCourier(courier);
+        //проверяем, что код 400
+        assertEquals(SC_BAD_REQUEST, response.statusCode());
+    }
+
+    @Test
     public void checkResponseDefectLogin() { //проверяем не успешный запрос и ответ с нехваткой данных
         //создание курьера
         courier.setLogin(null);

@@ -1,5 +1,6 @@
 package forcourier;
 
+import io.qameta.allure.Step;
 import org.apache.commons.lang3.RandomStringUtils;
 
 public class Courier {

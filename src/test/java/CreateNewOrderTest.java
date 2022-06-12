@@ -1,5 +1,5 @@
-import forparameterized.CreateNewOrder;
-import forparameterized.Order;
+import fororders.Order;
+import fororders.OrderApi;
 import io.restassured.response.Response;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,14 +37,14 @@ public class CreateNewOrderTest {
     @Test
     public void checkCode() {
         Order order = new Order(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
-        Response response = CreateNewOrder.createOrder(order);
+        Response response = OrderApi.createOrder(order);
         assertEquals(SC_CREATED, response.statusCode());
     }
 
     @Test
     public void checkTrack() {
         Order order = new Order(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
-        Response response = CreateNewOrder.createOrder(order);
+        Response response = OrderApi.createOrder(order);
         assertNotNull(response.body().jsonPath().getString("track"));
     }
 }

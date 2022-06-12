@@ -1,6 +1,5 @@
-forcheckorders\AcceptOrder.class
 forcourier\CourierLogin.class
 forcourier\CouriersAPI.class
+fororders\Order.class
 forcourier\Courier.class
-forparameterized\CreateNewOrder.class
-forparameterized\Order.class
+fororders\OrderApi.class

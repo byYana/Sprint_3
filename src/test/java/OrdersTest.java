@@ -1,5 +1,5 @@
-import forcheckorders.AcceptOrder;
-import forparameterized.Order;
+import fororders.Order;
+import fororders.OrderApi;
 import io.restassured.response.Response;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,13 +19,13 @@ public class OrdersTest {
 
     @Test
     public void checkCodeOrder() {
-        Response listOrder = AcceptOrder.getListOrders();
+        Response listOrder = OrderApi.getListOrders();
         assertEquals(SC_OK, listOrder.statusCode());
     }
 
     @Test
     public void checkTextOrder() {
-        Response listOrder = AcceptOrder.getListOrders();
+        Response listOrder = OrderApi.getListOrders();
         assertNotNull(listOrder);
     }
 }
